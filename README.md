@@ -26,7 +26,8 @@ src/
 └── main.jsx
 
 
- Key Highlights
+ Key Points
+
 ✅ React with Vite for fast setup and performance
 
 🎯 Custom Hook (useFetchMostPopArticles) for data fetching logic
@@ -45,6 +46,7 @@ src/
 
 
 🧠 Implementation Overview
+
 Data Fetching with Custom Hook
 useFetchMostPopArticles handles API calls using fetchMostPopularArticles() from services/api.js.
 
@@ -53,6 +55,7 @@ Utilizes useState and useEffect to manage asynchronous fetching.
 Returns articles, loading, and error for flexible rendering.
 
 Component Breakdown
+
 ArticleList: A stateless presentational component that shows article titles in a list.
 
 ArticleDetail: Displays full details of the selected article.
