@@ -174,3 +174,17 @@ Returns only data.results, keeping the structure consistent for consumers.
 |-------------| |----------------|
 |   List UI   | |  Detail UI     |
 +-------------+ +----------------+
+
+
+ Instructions
+
+Install dependencies using npm install or yarn install.
+
+Set up your NY Times API key in the .env file.
+
+Run the development server using npm run dev or yarn dev.
+
+Run unit and end-to-end tests with npm test/yarn test and npm run cypress:open/yarn cypress:open.
+
+
+Build the app for production using npm run build/yarn build.
