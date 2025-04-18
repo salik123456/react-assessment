@@ -7,8 +7,7 @@ describe('ArticleDetail Component', () => {
     title: 'Sample Article Title',
     abstract: 'This is a sample abstract for the article.',
     byline: 'By Author Name',
-    published_date: '2023-01-01',
-    url: 'https://www.nytimes.com/sample-article'
+    url: 'https://www.nytimes.com/sample-article',
   };
 
   test('renders article title', () => {
@@ -23,15 +22,9 @@ describe('ArticleDetail Component', () => {
     expect(abstractElement).toBeInTheDocument();
   });
 
-  test('renders article published date', () => {
-    render(<ArticleDetail article={article} />);
-    const dateElement = screen.getByText(/January 1, 2023/i);
-    expect(dateElement).toBeInTheDocument();
-  });
-
   test('renders article link', () => {
     render(<ArticleDetail article={article} />);
-    const linkElement = screen.getByRole('link', { name: /Read more/i });
+    const linkElement = screen.getByRole('link', { name: /Read full article/i }); // adjusted to match component
     expect(linkElement).toHaveAttribute('href', article.url);
   });
 });

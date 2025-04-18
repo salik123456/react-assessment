@@ -1,9 +1,14 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import ArticleContainer from '../containers/ArticleContainer';
-import useFetchMostPopArticles from '../hooks/useFetchMostPopArticles';
 
-jest.mock('../hooks/useFetchMostPopArticles');
+
+jest.mock('../hooks/useFetchMostPopArticles', () => ({
+  __esModule: true,
+  default: jest.fn()
+}));
+
+import useFetchMostPopArticles from '../hooks/useFetchMostPopArticles';
 
 describe('ArticleContainer', () => {
   it('shows loading state initially', () => {
